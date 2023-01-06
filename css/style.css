@@ -1,0 +1,219 @@
+/*
+  FONT-FAMILY
+*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/* 
+  ROOT
+*/
+:root {
+  /* 
+    PRIMARY 
+  */
+  --blue: hsl(246, 80%, 60%);
+
+  /* 
+    CARDS 
+  */
+  --work: hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self-care: hsl(43, 84%, 65%);
+
+  /*
+    NEUTRAL
+  */
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+  --border-radius: 10px;
+
+  /*
+    TYPOGRAPHY
+  */
+  --font-family: 'Rubik', sans-serif;
+  --font-300: 300;
+  --font-400: 400;
+  --font-500: 500;
+}
+
+/*
+  NEUTRO
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--font-family);
+  background-color: #000;
+}
+
+footer {
+  font-size: 0.85rem;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.attribution a {
+  color: var(--blue);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+/*
+  CARD PERSON
+*/
+.card-person {
+  background-color: var(--blue);
+  color: #fff;
+  border-radius: var(--border-radius);
+  padding: 15px 30px 60px 15px;
+  width: 150px;
+  position: relative;
+  z-index: 2;
+}
+
+.card-person .person-img {
+  width: 50px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.card-person .report {
+  font-size: 0.6rem;
+  font-weight: var(--font-300);
+}
+
+.card-person .title {
+  font-size: 1.5rem;
+  font-weight: var(--font-300);
+}
+
+/*
+  CARD HOURS
+*/
+.card-hours {
+  height: 100px;
+  background-color: var(--dark-blue);
+  color: var(--desaturated-blue);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  box-shadow: 0px -20px 0px 0px var(--dark-blue);
+}
+
+.card-hours .sub-title {
+  font-size: 0.75rem;
+  margin-left: 15px;
+  margin-top: 10px;
+  width: fit-content;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/*
+  CARD DETAILS
+*/
+.individual-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card-detail {
+  width: 150px;
+  height: 122px;
+  background-color: var(--dark-blue);
+  color: #fff;
+  border-radius: var(--border-radius);
+  padding: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.dashboard-icon {
+  width: 100%;
+  height: 25px;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.work-color-icon {
+  background-color: var(--work);
+  box-shadow: 0 10px 0 var(--work);
+}
+
+.play-color-icon {
+  background-color: var(--play);
+  box-shadow: 0 10px 0 var(--play);
+}
+
+.study-color-icon {
+  background-color: var(--study);
+  box-shadow: 0 10px 0 var(--study);
+}
+
+.exercise-color-icon {
+  background-color: var(--exercise);
+  box-shadow: 0 10px 0 var(--exercise);
+}
+
+.social-color-icon {
+  background-color: var(--social);
+  box-shadow: 0 10px 0 var(--social);
+}
+
+.self-care-color-icon {
+  background-color: var(--self-care);
+  box-shadow: 0 10px 0 var(--self-care);
+}
+
+.img-icon {
+  float: right;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.ellipsis-icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.ellipsis-icon img {
+  width: 13px;
+}
+
+.card-title {
+  font-size: 0.75rem;
+  margin-bottom: 15px;
+}
+
+.currentHours {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: var(--font-300);
+}
+
+.previous-hours {
+  font-size: 0.6rem;
+  color: var(--desaturated-blue);
+}
